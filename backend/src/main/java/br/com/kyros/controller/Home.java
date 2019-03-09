@@ -8,9 +8,9 @@ import javax.ws.rs.core.MediaType;
 import br.com.kyros.entity.Cliente;
 
 /**
- * Root resource (exposed at "/" path)
+ * Root resource (exposed at "/cliente" path)
  */
-@Path("/")
+@Path("/cliente")
 public class Home {
 
     /**
@@ -19,7 +19,8 @@ public class Home {
      *
      * @return String that will be returned as a text/plain response.
      */
-    @GET
+    @SuppressWarnings("unused")
+	@GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
         Cliente cliente = new Cliente();
