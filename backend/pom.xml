@@ -24,6 +24,12 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<!-- 2.2 (default do lifecycle) quebra no JDK 21: Cannot access defaults field of Properties -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.5.1</version>
+			</plugin>
 		</plugins>
 	</build>
 
@@ -76,14 +82,16 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.3.7.Final</version>
+			<version>5.3.38.Final</version>
 		</dependency>
 
-		<!-- Mysql Connector -->
+		<!-- MySQL Connector/J. O artefato mysql:mysql-connector-java parou em 8.0.33
+		     e continua vulnerável ao CVE-2023-22102; a correção está em
+		     com.mysql:mysql-connector-j 8.2.0 ou superior. -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.33</version>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>26.10.0</version>
 		</dependency>
 
 		<dependency>
