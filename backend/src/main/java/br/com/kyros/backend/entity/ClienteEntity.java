@@ -2,7 +2,7 @@ package br.com.kyros.backend.entity;
 
 import java.util.Date;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cliente")
