@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class ClienteEntity {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "nome")
@@ -19,6 +19,7 @@ public class ClienteEntity {
 	private String cpf;
 
 	@Column(name = "data_aniversario")
+	@Temporal(TemporalType.DATE)
 	private Date dataAniversario;
 
 	@Column(name = "email")
