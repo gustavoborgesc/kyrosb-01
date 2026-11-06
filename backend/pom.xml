@@ -48,9 +48,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet-core</artifactId>
-			<!-- use the following artifactId if you don't need servlet 2.x compatibility -->
-			<!-- artifactId>jersey-container-servlet</artifactId -->
+			<artifactId>jersey-container-servlet</artifactId>
+			<!-- Jersey 4 fundiu jersey-container-servlet-core neste módulo (Jakarta Servlet 6.1). -->
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.inject</groupId>
@@ -78,14 +77,6 @@
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>7.4.14.Final</version>
-		</dependency>
-		<!-- Hibernate 7 analisa persistence.xml com JAXB 4 (jakarta.xml.bind).
-		     jersey-test-framework-core 2.48 traz jakarta.xml.bind-api 2.3.3,
-		     cujo pacote ainda é javax.xml.bind, e essa versão vence a mediação. -->
-		<dependency>
-			<groupId>jakarta.xml.bind</groupId>
-			<artifactId>jakarta.xml.bind-api</artifactId>
-			<version>4.0.4</version>
 		</dependency>
 
 		<!-- MySQL Connector/J. O artefato mysql:mysql-connector-java parou em 8.0.33
