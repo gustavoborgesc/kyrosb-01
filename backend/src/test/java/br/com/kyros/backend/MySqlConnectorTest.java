@@ -8,9 +8,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Date;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 
 import org.junit.Assume;
 import org.junit.Test;
@@ -19,7 +19,7 @@ import br.com.kyros.backend.entity.ClienteEntity;
 
 /**
  * Garante o artefato corrigido do CVE-2023-22102 e, quando o MySQL local
- * responde, que o Hibernate 5.3 persiste com esse driver.
+ * responde, que o Hibernate persiste com esse driver.
  */
 public class MySqlConnectorTest {
 
