@@ -2,9 +2,6 @@ package br.com.kyros.backend.http;
 
 import java.util.Date;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 public class Cliente {
 
 	private Long id;
