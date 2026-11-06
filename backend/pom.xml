@@ -70,6 +70,7 @@
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
 			<artifactId>jersey-test-framework-provider-jdk-http</artifactId>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- Hibernate ORM 7. hibernate-entitymanager foi incorporado ao hibernate-core no Hibernate 6. -->
